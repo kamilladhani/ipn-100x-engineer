@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import { NextRequest, NextResponse } from 'next/server';
 import restaurantData from '@/data/restaurants.json';
 import { calculateDistance, mockGeocode, DEFAULT_COORDINATES } from '@/utils/distance';

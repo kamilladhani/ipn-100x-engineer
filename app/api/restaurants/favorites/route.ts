@@ -8,6 +8,8 @@
  * but the feature was never completed.
  */
 
+/* eslint-disable no-console, no-unused-vars */
+
 import { NextRequest, NextResponse } from 'next/server';
 
 // In-memory storage for favorites (would use a database in production)
