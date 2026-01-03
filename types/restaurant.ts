@@ -7,10 +7,15 @@ export interface Restaurant {
   priceRange: string;
   openingHours: string;
   closingHours: string;
+  operatingHours?: string;
   latitude: number;
   longitude: number;
   phone: string;
   description: string;
+  vegetarianOptions?: string;
+  signatureDishes?: string;
+  website?: string;
+  specialFeatures?: string;
 }
 
 export interface SearchParams {

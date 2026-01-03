@@ -64,10 +64,16 @@ export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
           📍 {restaurant.address}
         </p>
 
-        {/* TODO: Workshop Exercise 1 - Add opening hours display */}
-        {/* The data includes openingHours and closingHours fields */}
-        {/* Display them here with appropriate formatting */}
-        {/* Consider showing "Open Now" or "Closed" status */}
+        <div className="text-sm text-gray-600 mb-2">
+          <span className="font-medium">Hours:</span>{' '}
+          {restaurant.operatingHours || `${restaurant.openingHours} - ${restaurant.closingHours}`}
+        </div>
+
+        {restaurant.vegetarianOptions && (
+          <p className="text-sm text-green-600 mb-2">
+            Vegetarian: {restaurant.vegetarianOptions}
+          </p>
+        )}
 
         <p className="text-sm text-gray-500 line-clamp-2">{restaurant.description}</p>
 
@@ -93,6 +99,7 @@ function getCuisineEmoji(cuisine: string): string {
     Japanese: '🍣',
     American: '🍔',
     Indian: '🍛',
+    Pakistani: '🍛',
     Vietnamese: '🍜',
     Mediterranean: '🥙',
     Korean: '🍲',
